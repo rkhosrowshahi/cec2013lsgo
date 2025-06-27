@@ -49,21 +49,30 @@ cdef class Benchmark:
         """
         cdef double optimum
         cdef double range_fun
+        cdef int dim
 
         optimum = 0
 
-        if (fun in [2, 5, 9]):
+        if (fun in [2, 5, 9, 17, 22]):
             range_fun = 5
-        elif (fun in [3, 6, 10]):
+        elif (fun in [3, 6, 10, 18, 23]):
             range_fun = 32
         else:
             range_fun = 100
 
+        if (fun in range(16, 21)):
+            dim = 10000
+        elif (fun in range(21, 26)):
+            dim = 100000
+        else:
+            dim = 1000
+
+
         return {'lower': -range_fun, 'upper': range_fun, 'threshold': 0,
-                'best': optimum, 'dimension': 1000}
+                'best': optimum, 'dimension': dim}
 
     def get_num_functions(self):
-        return 15
+        return 25
 
     def __dealloc(self):
         free_func()

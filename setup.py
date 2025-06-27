@@ -13,7 +13,7 @@ sourcefiles = ['cec2013lsgo/cec2013.pyx']
 
 sourcefiles += ['cec2013lsgo/eval_func.cpp', 'cec2013lsgo/Benchmarks.cpp']
 
-for i in range(1, 16):
+for i in range(1, 26):
     sourcefiles += ['cec2013lsgo/F%d.cpp' % i]
 
 cec2013lsgo = Extension("cec2013lsgo.cec2013",
@@ -45,7 +45,7 @@ class PyTest(TestCommand):
 
 setup(
     name='cec2013lsgo',
-    version='2.0',
+    version='2.1',
     author='Daniel Molina',
     author_email='dmolina@decsai.ugr.es',
     maintainer='Daniel Molina',

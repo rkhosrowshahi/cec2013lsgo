@@ -34,9 +34,9 @@ Benchmarks::Benchmarks(){
   unsigned int next=0;
   output = "";
   // Store the milestones (10% and previous milestones: 1.25e5, 6e5, 3e6)
-  milestones = new unsigned int[10+3];
+  milestones = new unsigned int[10+5];
   mil_pos = 0;
-  unsigned int others[] = {120000, 600000, 3000000};
+  unsigned int others[] = {120000, 600000, 1000000, 2000000, 3000000};
   int m_i, o_i;
 
   for (m_i = 0, o_i = 0, next = increm; next <= maxevals; next+= increm) {

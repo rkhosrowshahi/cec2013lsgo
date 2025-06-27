@@ -17,15 +17,15 @@ def test_info(bench):
     """
     Test the information about each function
     """
-    expected_upper = [100, 100, 100, 100, 100,
-                      32, 100, 100, 5, 32, 100, 100, 100, 100, 100]
+    expected_upper = {1: 100, 2: 100, 3: 100, 4: 100, 5: 100, 6: 32, 7: 100, 8: 100, 9: 5, 10: 32, 11: 100, 12: 100, 13: 100, 14: 100, 15: 100, 
+                      16: 100, 17: 5, 18: 32, 19: 100, 20: 100, 21: 100, 22: 5, 23: 32, 24: 100, 25: 100}
     num_funs = bench.get_num_functions()
-    assert num_funs == 15
+    assert num_funs == 25
 
     for i in range(1, num_funs + 1):
         info = bench.get_info(i)
         assert info['lower'] == info['upper'] * -1
-        assert info['upper'] == expected_upper[i - 1]
+        assert info['upper'] == expected_upper[i]
         assert info['threshold'] == 0
         assert info['best'] == 0
         assert info['dimension'] == 1000

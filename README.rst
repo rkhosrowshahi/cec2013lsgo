@@ -70,11 +70,11 @@ These two functionalities are done with two methods in Benchmark class:
 
 - **get_num_functions()**
 
-  Return the number of functions in the benchmarks (15)
+  Return the number of functions in the benchmarks (25)
 
 - **get_info(function_id)**
 
-  Return an array with the following information, where /function_id/ is the identifier of the function, a int value between 1 and 15.
+  Return an array with the following information, where /function_id/ is the identifier of the function, a int value between 1 and 25.
 
     - lower, upper
         *lower* and *upper* boundaries of the domain search. 
@@ -93,7 +93,7 @@ These two functionalities are done with two methods in Benchmark class:
 
 - **get_function(function_id)**
 
-  *function_id* is the same parameter than in **get_info**, an integer value between 1 and 15.
+  *function_id* is the same parameter than in **get_info**, an integer value between 1 and 25.
   
   It returns the fitness function to evaluate the solutions.
 
